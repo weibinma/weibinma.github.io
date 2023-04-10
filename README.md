@@ -1,6 +1,6 @@
-### Weibin Ma's Personal Webpage
+### Weibin Ma's Personal Website
 Why I create this repo:
   - host my personal webpage
-  - learn web development technologies
+  - learn Web development technologies
 
 I may update the content in free time.
