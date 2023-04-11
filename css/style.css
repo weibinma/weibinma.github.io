@@ -131,18 +131,10 @@ p{
     line-height: 1.5em;
 }
 
-#author-name {
-    /* color: #555; */
-}
-
 #author-name strong {
     color: black;
     text-decoration: underline;
 }
-
-/* #paper-link a {
-    color: #F08050;
-} */
 
 #paper-ul li {
     margin: 0;
@@ -158,11 +150,10 @@ p{
     /* color: #F08050; */
 }
 
+#award a:hover {
+    font-size: 0.8575em; /*0.875 * 98%*/
+}
+
 #service {
     margin: 0.2em;
 }
-
-#linkedin-link {
-
-}
-
