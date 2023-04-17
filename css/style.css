@@ -157,3 +157,7 @@ p{
 #service h2 {
     margin: 0.2em;
 }
+
+[v-cloak] {
+    display: none;
+}

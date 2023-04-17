@@ -14,11 +14,11 @@
 
     
     <!-- Self-Intro -->
-    <section class="box" id="headers">
+    <section class="box" id="headers" v-cloak>
         <div id="self-intro">
             <h2>PhD Candidate</h2>
-            <h2 v-for="univLink in university" :key="univLink.id"> <a target="_blank" :href="univLink.url"> {{univLink.name}} </a> </h2>
-            <h2> 
+            <h2 v-for="univLink in university" :key="univLink.id" v-cloak> <a target="_blank" :href="univLink.url"> {{univLink.name}} </a> </h2>
+            <h2 v-cloak> 
                 <a target="_blank" :href="myself.linkedIn.url"> {{myself.linkedIn.name}}</a> | 
                 <a target="_blank" :href="myself.googleScholar.url"> {{myself.googleScholar.name}}</a> |
                 <a target="_blank" :href="myself.gitHub.url"> {{myself.gitHub.name}}</a>
@@ -58,7 +58,7 @@
 
     <hr>
     <!-- Working Experience -->
-    <section class="box" id="work-experience">
+    <section class="box" id="work-experience" v-cloak>
         <h1>Working Experience</h1>
         <ul>
             <li v-for="work in works" :key="work.id">
@@ -72,7 +72,7 @@
 
     <hr>
     <!-- Publication -->
-    <section class="box" id="publication">
+    <section class="box" id="publication" v-cloak>
         <h1>Publications</h1>
         <h2><strong>Journal Papers</strong></h2>
             <ul id="paper-ul">
@@ -96,7 +96,7 @@
 
     <hr>
     <!-- Award -->
-    <section class="box" id="award">
+    <section class="box" id="award" v-cloak>
         <h1>Award</h1>
         <ul>
             <li v-for="award in awards" :key="award.id"><h2> {{award.awardName}} <span v-if="award.url">[<a target="_blank" :href="award.url"><strong>Link</strong></a>]</span></h2></li>
@@ -106,7 +106,7 @@
 
     <hr>
     <!-- Service -->
-    <section class="box" id="service">
+    <section class="box" id="service" v-cloak>
         <h1>Service</h1>
         <ul>
             <li v-for="service in services" :key="service.id"><h2> {{service.confName}} </h2></li>
