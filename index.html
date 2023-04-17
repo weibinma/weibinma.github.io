@@ -82,8 +82,7 @@
                 <li v-for="paper in conference" :key="paper.id">
                     <p id="paper-title"> {{paper.title}} </p>
                     <p id="author-name" v-html="paper.authors"></p>
-                    <p id="paper-link"> {{paper.publisher}} </p>
-                    <p>[<a target="_blank" :href="paper.url"><strong>Link</strong></a>] <span v-if="paper.pdf">[<a target="_blank" :href="paper.pdf"><strong>PDF</strong></a>]</span> </p>
+                    <p id="paper-link"> {{paper.publisher}} [<a target="_blank" :href="paper.url"><strong>Link</strong></a>] <span v-if="paper.pdf">[<a target="_blank" :href="paper.pdf"><strong>PDF</strong></a>]</span></p>
                 </li>
             </ul>
     </section>
@@ -94,7 +93,7 @@
     <section class="box" id="award">
         <h1>Award</h1>
         <ul>
-            <li v-for="award in awards" :key="award.id"><h2> {{award.awardName}}<span v-if="award.url">[<a target="_blank" :href="award.url"><strong>Link</strong></a>]</span></h2></li>
+            <li v-for="award in awards" :key="award.id"><h2> {{award.awardName}} <span v-if="award.url">[<a target="_blank" :href="award.url"><strong>Link</strong></a>]</span></h2></li>
         </ul>
     </section>
 

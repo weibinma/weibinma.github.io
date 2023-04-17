@@ -64,6 +64,14 @@ const publication = Vue.createApp({
                 pdf: ""
             },
             {
+                id: "sec2019", 
+                title: "Poster: Privacy-by-design Task Offloading for UAV-mounted Cloudlets", 
+                authors: "<strong>Weibin Ma</strong> and Lena Mashayekhy", 
+                publisher: "ACM/IEEE SEC, Arlington VA, USA, November 2019", 
+                url: "https://dl.acm.org/doi/10.1145/3318216.3363320", 
+                pdf: ""
+            },
+            {
                 id: "iciot2019", 
                 title: "A Strategic Game for Task Offloading among Capacitated UAV-Mounted Cloudlets", 
                 authors: "<strong>Weibin Ma</strong>, Xuanzhang Liu, and Lena Mashayekhy", 
