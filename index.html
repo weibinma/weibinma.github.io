@@ -17,8 +17,8 @@
     <section class="box" id="headers" v-cloak>
         <div id="self-intro">
             <h2>PhD Candidate</h2>
-            <h2 v-for="univLink in university" :key="univLink.id" v-cloak> <a target="_blank" :href="univLink.url"> {{univLink.name}} </a> </h2>
-            <h2 v-cloak> 
+            <h2 v-for="univLink in university" :key="univLink.id"> <a target="_blank" :href="univLink.url"> {{univLink.name}} </a> </h2>
+            <h2> 
                 <a target="_blank" :href="myself.linkedIn.url"> {{myself.linkedIn.name}}</a> | 
                 <a target="_blank" :href="myself.googleScholar.url"> {{myself.googleScholar.name}}</a> |
                 <a target="_blank" :href="myself.gitHub.url"> {{myself.gitHub.name}}</a>
@@ -39,11 +39,7 @@
         <div class="container">
             <hr>
             <h1>About Me</h1>
-            <h2> I am currently a Ph.D. Candidate in Computer Science at University of Delaware, 
-                where I am fortunate to be advised by <a target="_blank" href="https://www.eecis.udel.edu/lena/">Prof. Lena Mashayekhy</a>. 
-                Before entering PhD study in fall 2018, I received my B.S. degree in Electronic Information Science and Technology at 
-                Dalian Maritime University, Dalian, China in 2014 and received my M.S. degree in Data Science at 
-                University at Buffalo, The State University of New York, Buffalo, USA in 2018.</h2>
+            <h2 v-html="text"></h2>
         </div>
     </section>
 
