@@ -28,6 +28,18 @@ const aboutme = Vue.createApp({
 aboutme.mount('#about-me');
 
 
+const research = Vue.createApp({
+    data() {
+        return {
+            text: 'Edge Computing, Computation/Video Offloading, Resource Allocation, Service Placement, Optimization.'
+        }
+    },
+});
+
+research.mount('#research-interest');
+
+
+
 const work = Vue.createApp({
     data() {
         return {
