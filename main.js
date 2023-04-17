@@ -21,7 +21,7 @@ const publication = Vue.createApp({
                 authors: "Nafiseh Sharghivand, Lena Mashayekhy, <strong>Weibin Ma</strong>, Schahram Dustdar", 
                 publisher: "IEEE Transactions on Services Computing, Sep 2022 (<strong>Impact Factor: 11.019</strong>)", 
                 url: "https://ieeexplore.ieee.org/document/9899742", 
-                pdf:""}
+                pdf:"./files/tsc_2022.pdf"}
             ], 
             conference: [{
                 id: "ucc2021", 
