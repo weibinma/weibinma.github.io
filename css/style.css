@@ -141,7 +141,7 @@ p{
     padding: 0.5em;
 }
 
-#award {
+#award h2{
     margin: 0.2em;
 }
 
@@ -154,6 +154,6 @@ p{
     font-size: 0.8575em; /*0.875 * 98%*/
 }
 
-#service {
+#service h2 {
     margin: 0.2em;
 }
