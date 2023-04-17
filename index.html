@@ -12,13 +12,17 @@
         <h1>Weibin Ma</h1>
     </header>
 
+    
     <!-- Self-Intro -->
-    <section class="box">
+    <section class="box" id="headers">
         <div id="self-intro">
             <h2>PhD Candidate</h2>
-            <h2><a target="_blank" href="https://www.cis.udel.edu"> Department of Computer & Information Sciences</a></h2>
-            <h2><a target="_blank" href="https://www.udel.edu"> University of Delaware</a> </h2>
-            <h2><a target="_blank" href="https://www.linkedin.com/in/weibinma"> LinkedIn </a>|<a target="_blank" href="https://scholar.google.com/citations?user=Wr8AlW8AAAAJ&hl=en"> Google Scholar</a> </h2>
+            <h2 v-for="univLink in university" :key="univLink.id"> <a target="_blank" :href="univLink.url"> {{univLink.name}} </a> </h2>
+            <h2> 
+                <a target="_blank" :href="myself.linkedIn.url"> {{myself.linkedIn.name}}</a> | 
+                <a target="_blank" :href="myself.googleScholar.url"> {{myself.googleScholar.name}}</a> |
+                <a target="_blank" :href="myself.gitHub.url"> {{myself.gitHub.name}}</a>
+            </h2>
             <!-- <h3><b>Email</b> : weibinma at udel dot edu</h3> -->
             <p><i>Last modified in Mar, 2023</i></p>
         </div>
@@ -27,7 +31,9 @@
             <img src="images/me.jpeg" alt="headshot">
         </div>
     </section>
+
     
+
     <!-- About Me -->
     <section class="box" id="about-me">
         <div class="container">

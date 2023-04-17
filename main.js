@@ -1,3 +1,21 @@
+const headers = Vue.createApp({
+    data() {
+        return {
+            university: {
+                cis: {id: "cis", name: "Department of Computer & Information Sciences", url: "https://www.cis.udel.edu"},
+                udel: {id: "udel", name: "University of Delaware", url: "https://www.udel.edu"},
+            },
+            myself: {
+                linkedIn: {id: "linkedIn", name: "LinkedIn", url: "https://www.linkedin.com/in/weibinma"},
+                googleScholar: {id: "googleScholar", name: "Google Scholar", url: "https://scholar.google.com/citations?user=Wr8AlW8AAAAJ&hl=en"},
+                gitHub: {id: "gitHub", name: "GitHub", url: "https://github.com/weibinma"},
+            }
+        }
+    },
+});
+
+headers.mount('#headers');
+
 const work = Vue.createApp({
     data() {
         return {
