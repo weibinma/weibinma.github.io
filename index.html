@@ -44,17 +44,17 @@
     </section>
 
 
-    <hr>
     <!-- Research Interests -->
     <section class="box" id="research-interest" v-cloak>
+        <hr>
         <h1>Research Interests</h1>
         <h2 v-html="text"></h2>
     </section>
 
 
-    <hr>
     <!-- Working Experience -->
     <section class="box" id="work-experience" v-cloak>
+        <hr>
         <h1>Working Experience</h1>
         <ul>
             <li v-for="work in works" :key="work.id">
@@ -66,9 +66,9 @@
     </section>
 
 
-    <hr>
     <!-- Publication -->
     <section class="box" id="publication" v-cloak>
+        <hr>
         <h1>Publications</h1>
         <h2><strong>Journal Papers</strong></h2>
             <ul id="paper-ul">
@@ -90,9 +90,9 @@
     </section>
 
 
-    <hr>
     <!-- Award -->
     <section class="box" id="award" v-cloak>
+        <hr>
         <h1>Award</h1>
         <ul>
             <li v-for="award in awards" :key="award.id"><h2> {{award.awardName}} <span v-if="award.url">[<a target="_blank" :href="award.url"><strong>Link</strong></a>]</span></h2></li>
@@ -100,9 +100,9 @@
     </section>
 
 
-    <hr>
     <!-- Service -->
     <section class="box" id="service" v-cloak>
+        <hr>
         <h1>Service</h1>
         <ul>
             <li v-for="service in services" :key="service.id"><h2> {{service.confName}} </h2></li>
