@@ -12,8 +12,17 @@ const headers = Vue.createApp({
             }
         }
     },
+    methods: {
+        getToday() {
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const today = new Date();
+            // const d = today.getDate();
+            const m = today.getMonth();
+            const y = today.getFullYear();
+            return `${months[m]}, ${y}`;
+        }
+    }
 });
-
 headers.mount('#headers');
 
 
@@ -24,7 +33,6 @@ const aboutme = Vue.createApp({
         }
     },
 });
-
 aboutme.mount('#about-me');
 
 
@@ -35,7 +43,6 @@ const research = Vue.createApp({
         }
     },
 });
-
 research.mount('#research-interest');
 
 
@@ -51,7 +58,6 @@ const work = Vue.createApp({
         }
     },
 });
-
 work.mount('#work-experience');
 
 
@@ -125,7 +131,6 @@ const publication = Vue.createApp({
         ]
     }
 }});
-
 publication.mount('#publication');
 
 
@@ -141,8 +146,8 @@ const award = Vue.createApp({
         }
     }
 });
-
 award.mount('#award');
+
 
 const service = Vue.createApp({
     data() {
@@ -155,5 +160,4 @@ const service = Vue.createApp({
         }
     },
 });
-
 service.mount('#service');
