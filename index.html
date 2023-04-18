@@ -17,11 +17,11 @@
     <section class="box" id="headers" v-cloak>
         <div id="self-intro">
             <h2>PhD Candidate</h2>
-            <h2 v-for="univLink in university" :key="univLink.id"> <a target="_blank" :href="univLink.url"> {{univLink.name}} </a> </h2>
+            <h2 v-for="univLink in header.university" :key="univLink.id"> <a target="_blank" :href="univLink.url"> {{univLink.name}} </a> </h2>
             <h2> 
-                <a target="_blank" :href="myself.linkedIn.url"> {{myself.linkedIn.name}}</a> | 
-                <a target="_blank" :href="myself.googleScholar.url"> {{myself.googleScholar.name}}</a> |
-                <a target="_blank" :href="myself.gitHub.url"> {{myself.gitHub.name}}</a>
+                <a target="_blank" :href="header.mylinks.linkedIn.url"> {{header.mylinks.linkedIn.name}}</a> | 
+                <a target="_blank" :href="header.mylinks.googleScholar.url"> {{header.mylinks.googleScholar.name}}</a> |
+                <a target="_blank" :href="header.mylinks.gitHub.url"> {{header.mylinks.gitHub.name}}</a>
             </h2>
             <!-- <h3><b>Email</b> : weibinma at udel dot edu</h3> -->
             <p><i>Last modified in {{getToday()}}</i></p>
@@ -31,7 +31,6 @@
             <img src="images/me.jpeg" alt="headshot">
         </div>
     </section>
-
     
 
     <!-- About Me -->
@@ -39,7 +38,7 @@
         <div class="container">
             <hr>
             <h1>About Me</h1>
-            <h2 v-html="text"></h2>
+            <h2 v-html="data.selfIntro"></h2>
         </div>
     </section>
 
@@ -48,7 +47,7 @@
     <section class="box" id="research-interest" v-cloak>
         <hr>
         <h1>Research Interests</h1>
-        <h2 v-html="text"></h2>
+        <h2 v-html="data.researchInterests"></h2>
     </section>
 
 
@@ -72,7 +71,7 @@
         <h1>Publications</h1>
         <h2><strong>Journal Papers</strong></h2>
             <ul id="paper-ul">
-                <li v-for="paper in journal" :key="paper.id">
+                <li v-for="paper in papers.journal" :key="paper.id">
                     <p id="paper-title"> {{paper.title}} </p>
                     <p id="author-name" v-html="paper.authors"></p>
                     <p id="paper-link" v-html="paper.publisher"></p>
@@ -81,7 +80,7 @@
             </ul>
         <h2><strong>Conference Papers</strong></h2>
             <ul id="paper-ul">
-                <li v-for="paper in conference" :key="paper.id">
+                <li v-for="paper in papers.conference" :key="paper.id">
                     <p id="paper-title"> {{paper.title}} </p>
                     <p id="author-name" v-html="paper.authors"></p>
                     <p id="paper-link"> {{paper.publisher}} [<a target="_blank" :href="paper.url"><strong>Link</strong></a>] <span v-if="paper.pdf">[<a target="_blank" :href="paper.pdf"><strong>PDF</strong></a>]</span></p>

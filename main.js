@@ -1,16 +1,19 @@
+// header component
 const headers = Vue.createApp({
     data() {
         return {
-            university: [
-                {id: 'cis', name: 'Department of Computer & Information Sciences', url: 'https://www.cis.udel.edu'},
-                {id: 'udel', name: 'University of Delaware', url: 'https://www.udel.edu'},
-            ],
-            myself: {
-                linkedIn: {id: 'linkedIn', name: 'LinkedIn', url: 'https://www.linkedin.com/in/weibinma'},
-                googleScholar: {id: 'googleScholar', name: 'Google Scholar', url: 'https://scholar.google.com/citations?user=Wr8AlW8AAAAJ&hl=en'},
-                gitHub: {id: 'gitHub', name: 'GitHub', url: 'https://github.com/weibinma'},
-            }
+            header: {
+                university: [],
+                mylinks: {
+                    linkedIn: {},
+                    googleScholar: {},
+                    gitHub: {}
+                }
+            },
         }
+    },
+    mounted() {
+        this.fetchData('./data/header.json')
     },
     methods: {
         getToday() {
@@ -20,144 +23,135 @@ const headers = Vue.createApp({
             const m = today.getMonth();
             const y = today.getFullYear();
             return `${months[m]}, ${y}`;
+        },
+        fetchData(filePath) {
+            fetch(filePath)
+                .then(res => res.json())
+                .then(data => this.header = data)
         }
     }
 });
-headers.mount('#headers');
 
-
+// aboutme component
 const aboutme = Vue.createApp({
     data() {
         return {
-            text: 'I am currently a Ph.D. Candidate in Computer Science at University of Delaware, where I am fortunate to be advised by <a target="_blank" href="https://www.eecis.udel.edu/lena/">Prof. Lena Mashayekhy</a>. Before entering PhD study in fall 2018, I received my B.S. degree in Electronic Information Science and Technology at Dalian Maritime University, Dalian, China in 2014 and received my M.S. degree in Data Science at University at Buffalo, The State University of New York, Buffalo, USA in 2018.'
+            data: {}
         }
     },
+    mounted() {
+        this.fetchData('./data/aboutme.json')
+    },
+    methods: {
+        fetchData(filePath) {
+            fetch(filePath)
+                .then(res => res.json())
+                .then(data => this.data = data)
+        }
+    }
 });
-aboutme.mount('#about-me');
 
-
+// research interests component
 const research = Vue.createApp({
     data() {
         return {
-            text: 'Edge Computing, Computation/Video Offloading, Resource Allocation, Service Placement, Optimization.'
+            data: {}
         }
     },
+    mounted() {
+        this.fetchData('./data/research.json')
+    },
+    methods: {
+        fetchData(filePath) {
+            fetch(filePath)
+                .then(res => res.json())
+                .then(data => this.data = data)
+        }
+    }
 });
-research.mount('#research-interest');
 
-
-
+// work experience component
 const work = Vue.createApp({
     data() {
         return {
-            works: [
-                {id: 'intern1', company: 'Meta (Facebook)', title: 'Software Engineer Intern, Systems and Infrastructure (PhD)', date: 'Jun 2022 - Sep 2022', location: 'Menlo Park, CA'},
-                {id: 'intern2', company: 'Marion Surgical', title: 'Data Engineer Intern', date: 'May 2018 - Aug 2018', location: 'Buffalo, NY'},
-                {id: 'fulltime1', company: 'Tianma Microelectronics', title: 'Test Device Engineer', date: 'July 2014 - Feb 2016', location: 'Xiamen, China'}
-            ]
+            works: []
         }
     },
+    mounted() {
+        this.fetchData('./data/work.json')
+    },
+    methods: {
+        fetchData(filePath) {
+            fetch(filePath)
+                .then(res => res.json())
+                .then(data => this.works = data)
+        }
+    }
 });
-work.mount('#work-experience');
 
-
+// publication component
 const publication = Vue.createApp({
     data() {
         return {
-            journal: [{
-                id: 'tsc2022', 
-                title: 'Time-Constrained Service Handoff for Mobile Edge Computing in 5G', 
-                authors: 'Nafiseh Sharghivand, Lena Mashayekhy, <strong>Weibin Ma</strong>, Schahram Dustdar', 
-                publisher: 'IEEE Transactions on Services Computing, Sep 2022 (<strong>Impact Factor: 11.019</strong>)', 
-                url: 'https://ieeexplore.ieee.org/document/9899742', 
-                pdf: './files/tsc_2022.pdf'}
-            ], 
-            conference: [{
-                id: 'ucc2021', 
-                title: 'QoS-Aware 5G Component Selection for Content Delivery in Multi-access Edge Computing', 
-                authors: 'Erfan Farhangi Maleki, <strong>Weibin Ma</strong>, Lena Mashayekhy and Humberto La Roche', 
-                publisher: 'IEEE/ACM UCC, Leicester, UK, Dec 2021', 
-                url: 'https://dl.acm.org/doi/10.1145/3468737.3494101', 
-                pdf: ''
-            },
-            {
-                id: 'cloud2021', 
-                title: 'Quality-Aware Video Offloading in Mobile Edge Computing: A Data-driven Two-stage Stochastic Optimization', 
-                authors: '<strong>Weibin Ma</strong> and Lena Mashayekhy', 
-                publisher: 'IEEE CLOUD, Virtual, September 2021', 
-                url: 'https://ieeexplore.ieee.org/document/9582261', 
-                pdf: './files/cloud_2021.pdf'
-            },
-            {
-                id: 'icdcs2021', 
-                title: 'Poster: Adaptive Video Offloading in Mobile Edge Computing', 
-                authors: '<strong>Weibin Ma</strong> and Lena Mashayekhy', 
-                publisher: 'IEEE ICDCS, Virtual, July 2021', 
-                url: 'https://ieeexplore.ieee.org/document/9546493', 
-                pdf: './files/icdcs_poster_2021.pdf'
-            },
-            {
-                id: 'edgecom2020', 
-                title: 'Truthful Computation Offloading Mechanisms for Edge Computing', 
-                authors: '<strong>Weibin Ma</strong> and Lena Mashayekhy', 
-                publisher: 'IEEE EdgeCom, Virtual, August 2020', 
-                url: 'https://ieeexplore.ieee.org/document/9170974', 
-                pdf: './files/edgecom_2020.pdf'
-            },
-            {
-                id: 'ucc2019', 
-                title: 'Privacy-by-Design Distributed Offloading for Vehicular Edge Computing', 
-                authors: '<strong>Weibin Ma</strong> and Lena Mashayekhy', 
-                publisher: 'IEEE/ACM UCC, Auckland, New Zealand, December 2019', 
-                url: 'https://dl.acm.org/doi/10.1145/3344341.3368804', 
-                pdf: ''
-            },
-            {
-                id: 'sec2019', 
-                title: 'Poster: Privacy-by-design Task Offloading for UAV-mounted Cloudlets', 
-                authors: '<strong>Weibin Ma</strong> and Lena Mashayekhy', 
-                publisher: 'ACM/IEEE SEC, Arlington VA, USA, November 2019', 
-                url: 'https://dl.acm.org/doi/10.1145/3318216.3363320', 
-                pdf: ''
-            },
-            {
-                id: 'iciot2019', 
-                title: 'A Strategic Game for Task Offloading among Capacitated UAV-Mounted Cloudlets', 
-                authors: '<strong>Weibin Ma</strong>, Xuanzhang Liu, and Lena Mashayekhy', 
-                publisher: 'IEEE ICIOT, Milan, Italy, July 2019', 
-                url: 'https://ieeexplore.ieee.org/document/8815659', 
-                pdf: './files/iciot_2019.pdf'
-            }
-        ]
+            papers: []
+        }
+    },
+    mounted() {
+        this.fetchData('./data/publication.json')
+    },
+    methods: {
+        fetchData(filePath) {
+            fetch(filePath)
+                .then(res => res.json())
+                .then(data => this.papers = data)
+        }
     }
-}});
-publication.mount('#publication');
+});
 
-
+// award component
 const award = Vue.createApp({
     data() {
         return {
-            awards: [
-                {id: 'cis2021', awardName: 'CIS Outstanding Graduate Student Award, University of Delaware, 2021', url: 'https://www.cis.udel.edu/2021/05/14/congratulations-to-the-2021-cis-honors-day-award-recipients'},
-                {id: 'cis2020', awardName: 'CIS Distinguished Graduate Student Award, University of Delaware, 2020', url: 'https://www.cis.udel.edu/2020/05/28/congratulations-to-2020-cis-honors-day-award-recipients'},
-                {id: 'pda2019', awardName: 'Professional Development Award, University of Delaware, 2019', url: ''},
-                {id: 'nsfsec2019', awardName: 'NSF Student Travel Grant, ACM/IEEE SEC, 2019', url: ''}
-            ]
+            awards: []
+        }
+    },
+    mounted() {
+        this.fetchData('./data/award.json')
+    },
+    methods: {
+        fetchData(filePath) {
+            fetch(filePath)
+                .then(res => res.json())
+                .then(data => this.awards = data)
         }
     }
 });
-award.mount('#award');
 
-
+// service component
 const service = Vue.createApp({
     data() {
         return {
-            services: [
-                {id: 'coordination2022', confName: 'Subreviewer in the 24th International Conference on Coordination Models and Languages (COORDINATION 2022)'},
-                {id: 'fmec2021', confName: 'TPC in the 6th International Conference on Fog and Mobile Edge Computing (FMEC 2021)'},
-                {id: 'fmec2020', confName: 'TPC in the 5th International Conference on Fog and Mobile Edge Computing (FMEC 2020)'}
-            ]
+            services: []
         }
     },
+    mounted() {
+        this.fetchData('./data/service.json')
+    },
+    methods: {
+        fetchData(filePath) {
+            fetch(filePath)
+                .then(res => res.json())
+                .then(data => this.services = data)
+        }
+    }
 });
+
+
+
+headers.mount('#headers');
+aboutme.mount('#about-me');
+research.mount('#research-interest');
+work.mount('#work-experience');
+publication.mount('#publication');
+award.mount('#award');
 service.mount('#service');
