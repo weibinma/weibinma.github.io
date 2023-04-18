@@ -12,6 +12,7 @@ const headers = Vue.createApp({
                     gitHub: {}
                 }
             },
+            isLoaded: false
         }
     },
     mounted() {
@@ -29,7 +30,7 @@ const headers = Vue.createApp({
         fetchData(filePath) {
             fetch(filePath)
                 .then(res => res.json())
-                .then(data => this.header = data)
+                .then(data => {this.header = data, this.isLoaded = true})
         }
     }
 });

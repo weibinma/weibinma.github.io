@@ -23,7 +23,7 @@
                 <a target="_blank" :href="header.mylinks.gitHub.url"> {{header.mylinks.gitHub.name}}</a>
             </h2>
             <!-- <h3><b>Email</b> : weibinma at udel dot edu</h3> -->
-            <p><i>{{getToday()}}</i></p>
+            <p v-if="isLoaded"><i> {{getToday()}} </i></p>
         </div>
         <!-- Headshot -->
         <div id="sidebar">
