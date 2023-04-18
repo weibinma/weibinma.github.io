@@ -1,22 +1,25 @@
 {
-    "cis2021": {
-        "id": "cis2021",
-        "awardName": "CIS Outstanding Graduate Student Award, University of Delaware, 2021",
-        "url": "https://www.cis.udel.edu/2021/05/14/congratulations-to-the-2021-cis-honors-day-award-recipients"
-    },
-    "cis2020": {
-        "id": "cis2020",
-        "awardName": "CIS Distinguished Graduate Student Award, University of Delaware, 2020",
-        "url": "https://www.cis.udel.edu/2020/05/28/congratulations-to-2020-cis-honors-day-award-recipients"
-    },
-    "pda2019": {
-        "id": "pda2019",
-        "awardName": "Professional Development Award, University of Delaware, 2019",
-        "url": ""
-    },
-    "nsfsec2019": {
-        "id": "nsfsec2019",
-        "awardName": "NSF Student Travel Grant, ACM/IEEE SEC, 2019",
-        "url": ""
-    }
+    "title": "Award",
+    "allAwards": [
+        {
+            "id": "cis2021",
+            "awardName": "CIS Outstanding Graduate Student Award, University of Delaware, 2021",
+            "url": "https://www.cis.udel.edu/2021/05/14/congratulations-to-the-2021-cis-honors-day-award-recipients"
+        },
+        {
+            "id": "cis2020",
+            "awardName": "CIS Distinguished Graduate Student Award, University of Delaware, 2020",
+            "url": "https://www.cis.udel.edu/2020/05/28/congratulations-to-2020-cis-honors-day-award-recipients"
+        },
+        {
+            "id": "pda2019",
+            "awardName": "Professional Development Award, University of Delaware, 2019",
+            "url": ""
+        },
+        {
+            "id": "nsfsec2019",
+            "awardName": "NSF Student Travel Grant, ACM/IEEE SEC, 2019",
+            "url": ""
+        }
+    ]
 }

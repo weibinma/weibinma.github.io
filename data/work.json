@@ -1,23 +1,26 @@
 {
-    "meta": {
-        "id": "intern1",
-        "company": "Meta (Facebook)",
-        "title": "Software Engineer Intern, Systems and Infrastructure (PhD)",
-        "date": "Jun 2022 - Sep 2022",
-        "location": "Menlo Park, CA"
-    },
-    "marionsurgical": {
-        "id": "intern2",
-        "company": "Marion Surgical",
-        "title": "Data Engineer Intern",
-        "date": "May 2018 - Aug 2018",
-        "location": "Buffalo, NY"
-    },
-    "tianma": {
-        "id": "fulltime1",
-        "company": "Tianma Microelectronics",
-        "title": "Test Device Engineer",
-        "date": "July 2014 - Feb 2016",
-        "location": "Xiamen, China"
-    }
+    "title": "Working Experience",
+    "company": [
+        {
+            "id": "intern1",
+            "company": "Meta (Facebook)",
+            "title": "Software Engineer Intern, Systems and Infrastructure (PhD)",
+            "date": "Jun 2022 - Sep 2022",
+            "location": "Menlo Park, CA"
+        },
+        {
+            "id": "intern2",
+            "company": "Marion Surgical",
+            "title": "Data Engineer Intern",
+            "date": "May 2018 - Aug 2018",
+            "location": "Buffalo, NY"
+        },
+        {
+            "id": "fulltime1",
+            "company": "Tianma Microelectronics",
+            "title": "Test Device Engineer",
+            "date": "July 2014 - Feb 2016",
+            "location": "Xiamen, China"
+        }
+    ]
 }

@@ -2,8 +2,9 @@
 const headers = Vue.createApp({
     data() {
         return {
-            title: 'PhD Candidate',
             header: {
+                myname: '',
+                title: '',
                 university: [],
                 mylinks: {
                     linkedIn: {},
@@ -37,8 +38,7 @@ const headers = Vue.createApp({
 const aboutme = Vue.createApp({
     data() {
         return {
-            title: 'About Me',
-            data: {}
+            aboutMe: {}
         }
     },
     mounted() {
@@ -48,7 +48,7 @@ const aboutme = Vue.createApp({
         fetchData(filePath) {
             fetch(filePath)
                 .then(res => res.json())
-                .then(data => this.data = data)
+                .then(data => this.aboutMe = data)
         }
     }
 });
@@ -57,8 +57,7 @@ const aboutme = Vue.createApp({
 const research = Vue.createApp({
     data() {
         return {
-            title: 'Research Interests',
-            data: {}
+            researchInterests: {}
         }
     },
     mounted() {
@@ -68,7 +67,7 @@ const research = Vue.createApp({
         fetchData(filePath) {
             fetch(filePath)
                 .then(res => res.json())
-                .then(data => this.data = data)
+                .then(data => this.researchInterests = data)
         }
     }
 });
@@ -77,8 +76,7 @@ const research = Vue.createApp({
 const work = Vue.createApp({
     data() {
         return {
-            title: 'Working Experience',
-            works: []
+            workExperience: {},
         }
     },
     mounted() {
@@ -88,7 +86,7 @@ const work = Vue.createApp({
         fetchData(filePath) {
             fetch(filePath)
                 .then(res => res.json())
-                .then(data => this.works = data)
+                .then(data => this.workExperience = data)
         }
     }
 });
@@ -97,9 +95,19 @@ const work = Vue.createApp({
 const publication = Vue.createApp({
     data() {
         return {
-            journalTitle: 'Journal Papers',
-            conferenceTitle: 'Conference Papers',
-            papers: []
+            // journalTitle: 'Journal Papers',
+            // conferenceTitle: 'Conference Papers',
+            publications: {
+                title: '',
+                journal: {
+                    title: '',
+                    papers: []
+                },
+                conference: {
+                    title: '',
+                    papers: []
+                }
+            }
         }
     },
     mounted() {
@@ -109,7 +117,7 @@ const publication = Vue.createApp({
         fetchData(filePath) {
             fetch(filePath)
                 .then(res => res.json())
-                .then(data => this.papers = data)
+                .then(data => this.publications = data)
         }
     }
 });
@@ -118,8 +126,7 @@ const publication = Vue.createApp({
 const award = Vue.createApp({
     data() {
         return {
-            title: 'Award',
-            awards: []
+            awards: {}
         }
     },
     mounted() {
@@ -138,8 +145,7 @@ const award = Vue.createApp({
 const service = Vue.createApp({
     data() {
         return {
-            title: 'Service',
-            services: []
+            services: {}
         }
     },
     mounted() {

@@ -161,3 +161,7 @@ p{
 [v-cloak] {
     display: none;
 }
+
+hr {
+    display:none;
+}
