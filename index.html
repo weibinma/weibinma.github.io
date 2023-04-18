@@ -34,8 +34,8 @@
 
     <!-- About Me -->
     <section class="box" id="about-me" v-cloak>
-        <hr>
         <div class="container">
+            <hr v-if="isLoaded">
             <h1> {{aboutMe.title}} </h1>
             <h2 v-html="aboutMe.text"></h2>
         </div>
@@ -44,7 +44,7 @@
 
     <!-- Research Interests -->
     <section class="box" id="research-interest" v-cloak>
-        <hr>
+        <hr v-if="isLoaded">
         <h1> {{researchInterests.title}} </h1>
         <h2> {{researchInterests.text}} </h2>
     </section>
@@ -52,7 +52,7 @@
 
     <!-- Working Experience -->
     <div class="box" id="work-experience" v-cloak>
-        <hr>
+        <hr v-if="isLoaded">
         <h1> {{workExperience.title}} </h1>
         <ul>
             <li v-for="work in workExperience.company" :key="work.id">
@@ -66,7 +66,7 @@
 
     <!-- Publication -->
     <section class="box" id="publication" v-cloak>
-        <hr>
+        <hr v-if="isLoaded">
         <h1> {{publications.title}} </h1>
         <h2><strong> {{publications.journal.title}} </strong></h2>
             <ul id="paper-ul">
@@ -90,7 +90,7 @@
 
     <!-- Award -->
     <section class="box" id="award" v-cloak>
-        <hr>
+        <hr v-if="isLoaded">
         <h1> {{awards.title}} </h1>
         <ul>
             <li v-for="award in awards.allAwards" :key="award.id"><h2> {{award.awardName}} <span v-if="award.url">[<a target="_blank" :href="award.url"><strong>Link</strong></a>]</span></h2></li>
@@ -100,7 +100,7 @@
 
     <!-- Service -->
     <section class="box" id="service" v-cloak>
-        <hr>
+        <hr v-if="isLoaded">
         <h1> {{services.title}} </h1>
         <ul>
             <li v-for="service in services.allServices" :key="service.id"><h2> {{service.confName}} </h2></li>
