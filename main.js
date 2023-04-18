@@ -2,6 +2,7 @@
 const headers = Vue.createApp({
     data() {
         return {
+            title: 'PhD Candidate',
             header: {
                 university: [],
                 mylinks: {
@@ -22,7 +23,7 @@ const headers = Vue.createApp({
             // const d = today.getDate();
             const m = today.getMonth();
             const y = today.getFullYear();
-            return `${months[m]}, ${y}`;
+            return `Last modified in ${months[m]}, ${y}`;
         },
         fetchData(filePath) {
             fetch(filePath)
@@ -36,6 +37,7 @@ const headers = Vue.createApp({
 const aboutme = Vue.createApp({
     data() {
         return {
+            title: 'About Me',
             data: {}
         }
     },
@@ -55,6 +57,7 @@ const aboutme = Vue.createApp({
 const research = Vue.createApp({
     data() {
         return {
+            title: 'Research Interests',
             data: {}
         }
     },
@@ -74,6 +77,7 @@ const research = Vue.createApp({
 const work = Vue.createApp({
     data() {
         return {
+            title: 'Working Experience',
             works: []
         }
     },
@@ -93,6 +97,8 @@ const work = Vue.createApp({
 const publication = Vue.createApp({
     data() {
         return {
+            journalTitle: 'Journal Papers',
+            conferenceTitle: 'Conference Papers',
             papers: []
         }
     },
@@ -112,6 +118,7 @@ const publication = Vue.createApp({
 const award = Vue.createApp({
     data() {
         return {
+            title: 'Award',
             awards: []
         }
     },
@@ -131,6 +138,7 @@ const award = Vue.createApp({
 const service = Vue.createApp({
     data() {
         return {
+            title: 'Service',
             services: []
         }
     },
