@@ -1,14 +1,10 @@
-header {
-    color: black;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
-
 body {
-    background: url(../images/background.jpg); 
+    background: #edf2f7; 
+    color: #37474f; 
     margin: auto; 
-    max-width: 52%;
-    padding: 20px 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    max-width: 51%;
+    padding: 80px 80px;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     font-size: 16px;
     line-height: 1.6em;
 }
@@ -51,7 +47,6 @@ p{
 
 .container {
     width: 100%;
-    /* margin-left: 5px; */
     overflow: hidden;
 }
 
@@ -65,7 +60,6 @@ p{
 }
 #self-intro p {
     font-size: small;
-    color: gray;
 }
 
 #self-intro {
@@ -86,7 +80,8 @@ p{
     img{
         width: 100%;
         max-width: 100%;
-        height: 200px;
+        height: 126px;
+        margin-top: 70px;
     }
 }
 
@@ -105,18 +100,15 @@ p{
     }
     img{
         width: 100%;
-        height: 200px;
+        height: 126px;
         max-width: 100%;
         float: none;
+        margin: 0;
     }
 }
 
 .box ul {
     line-height: 20px;
-}
-
-#company-name {
-    color: black;
 }
 
 #job-title {
@@ -133,7 +125,6 @@ p{
 }
 
 #author-name strong {
-    color: black;
     text-decoration: underline;
 }
 
