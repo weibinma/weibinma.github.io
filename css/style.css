@@ -156,7 +156,7 @@ p{
         position: relative !important;
         top: 5% !important;
         left: 58% !important;
-        width: 400px !important;
+        width: 350px !important;
         height: 100px !important;
     }
     .wrapper .sidebar .profile img{
@@ -175,7 +175,7 @@ p{
     }
     .wrapper .sidebar .profile .related-links {
         position: relative;
-        left: 25% !important;
+        left: 30% !important;
         transform: translateY(-117%);
     }
 }
@@ -185,7 +185,13 @@ p{
         max-width: 100%;
     }
     .wrapper .sidebar{
-        left: 72% !important;
+        left: 65% !important;
+        width: 300px !important;
+        height: 100px !important;
+    }
+    .wrapper .sidebar .profile .text h1 {
+        left: -23% !important;
+        font-size: larger;
     }
 }
 
