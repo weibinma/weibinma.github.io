@@ -12,7 +12,6 @@ const headers = Vue.createApp({
                     gitHub: {}
                 }
             },
-            isLoaded: false
         }
     },
     mounted() {
@@ -30,7 +29,7 @@ const headers = Vue.createApp({
         fetchData(filePath) {
             fetch(filePath)
                 .then(res => res.json())
-                .then(data => {this.header = data, this.isLoaded = true})
+                .then(data => this.header = data)
         }
     }
 });
@@ -40,7 +39,6 @@ const aboutme = Vue.createApp({
     data() {
         return {
             aboutMe: {},
-            isLoaded: false
         }
     },
     mounted() {
@@ -50,7 +48,7 @@ const aboutme = Vue.createApp({
         fetchData(filePath) {
             fetch(filePath)
                 .then(res => res.json())
-                .then(data => {this.aboutMe = data, this.isLoaded = true})
+                .then(data => this.aboutMe = data)
         }
     }
 });
@@ -60,7 +58,6 @@ const research = Vue.createApp({
     data() {
         return {
             researchInterests: {},
-            isLoaded: false
         }
     },
     mounted() {
@@ -70,7 +67,7 @@ const research = Vue.createApp({
         fetchData(filePath) {
             fetch(filePath)
                 .then(res => res.json())
-                .then(data => {this.researchInterests = data, this.isLoaded = true})
+                .then(data => this.researchInterests = data)
         }
     }
 });
@@ -80,7 +77,6 @@ const work = Vue.createApp({
     data() {
         return {
             workExperience: {},
-            isLoaded: false
         }
     },
     mounted() {
@@ -90,7 +86,7 @@ const work = Vue.createApp({
         fetchData(filePath) {
             fetch(filePath)
                 .then(res => res.json())
-                .then(data => {this.workExperience = data, this.isLoaded = true})
+                .then(data => this.workExperience = data)
         }
     }
 });
@@ -99,8 +95,6 @@ const work = Vue.createApp({
 const publication = Vue.createApp({
     data() {
         return {
-            // journalTitle: 'Journal Papers',
-            // conferenceTitle: 'Conference Papers',
             publications: {
                 title: '',
                 journal: {
@@ -111,8 +105,7 @@ const publication = Vue.createApp({
                     title: '',
                     papers: []
                 }
-            },
-            isLoaded: false
+            }
         }
     },
     mounted() {
@@ -122,7 +115,7 @@ const publication = Vue.createApp({
         fetchData(filePath) {
             fetch(filePath)
                 .then(res => res.json())
-                .then(data => {this.publications = data, this.isLoaded = true})
+                .then(data => this.publications = data)
         }
     }
 });
@@ -132,7 +125,6 @@ const award = Vue.createApp({
     data() {
         return {
             awards: {},
-            isLoaded: false
         }
     },
     mounted() {
@@ -142,7 +134,7 @@ const award = Vue.createApp({
         fetchData(filePath) {
             fetch(filePath)
                 .then(res => res.json())
-                .then(data => {this.awards = data, this.isLoaded = true})
+                .then(data => this.awards = data)
         }
     }
 });
@@ -152,7 +144,6 @@ const service = Vue.createApp({
     data() {
         return {
             services: {},
-            isLoaded: false
         }
     },
     mounted() {
@@ -162,7 +153,7 @@ const service = Vue.createApp({
         fetchData(filePath) {
             fetch(filePath)
                 .then(res => res.json())
-                .then(data => {this.services = data, this.isLoaded = true})
+                .then(data => this.services = data)
         }
     }
 });

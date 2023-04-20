@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <title>Weibin Ma's Homepage</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="./css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>    
+<body>
     <!-- Self-Intro -->
-    <section class="box" id="headers" v-cloak>
-        <div id="self-intro">
-            <!-- Header -->
-            <header id="main-header">
-                <h1> {{header.myname}} </h1>
-            </header>
-            
-            <h2> {{header.title}} </h2>
-            <h2 v-for="univLink in header.university" :key="univLink.id"> <a target="_blank" :href="univLink.url"> {{univLink.name}} </a> </h2>
-            <h2> 
-                <a target="_blank" :href="header.mylinks.linkedIn.url"> {{header.mylinks.linkedIn.name}}</a> | 
-                <a target="_blank" :href="header.mylinks.googleScholar.url"> {{header.mylinks.googleScholar.name}}</a> |
-                <a target="_blank" :href="header.mylinks.gitHub.url"> {{header.mylinks.gitHub.name}}</a>
-            </h2>
-            <!-- <h3><b>Email</b> : weibinma at udel dot edu</h3> -->
-            <p v-if="isLoaded"><i> {{getToday()}} </i></p>
+    <div class="wrapper" id="headers" v-cloak>
+        <div class="sidebar">
+            <div class="profile">
+                <img src="images/me.jpeg" alt="headshot">
+                <div class="text">
+                    <h1> {{header.myname}} </h1>
+                    <h2> {{header.title}} </h2>
+                </div>
+                <div class="related-links">
+                    <a target="_blank" :href="header.mylinks.linkedIn.url">
+                        <span class="icon"><i class="fab fa-linkedin"></i></span>&nbsp;
+                    </a> &nbsp;&nbsp;
+                    <a target="_blank" :href="header.mylinks.googleScholar.url">
+                        <span class="icon"><i class="fas fa-graduation-cap"></i></span>&nbsp;
+                    </a> &nbsp;&nbsp;
+                    <a target="_blank" :href="header.mylinks.gitHub.url">
+                        <span class="icon"><i class="fab fa-github"></i></span>&nbsp;
+                    </a>
+                </div>
+            </div>
         </div>
-        <!-- Headshot -->
-        <div id="sidebar">
-            <img src="images/me.jpeg" alt="headshot">
-        </div>
-    </section>
-    
+    </div>
+
 
     <!-- About Me -->
     <section class="box" id="about-me" v-cloak>
         <div class="container">
-            <hr v-if="isLoaded">
             <h1> {{aboutMe.title}} </h1>
             <h2 v-html="aboutMe.text"></h2>
         </div>
@@ -44,7 +45,6 @@
 
     <!-- Research Interests -->
     <section class="box" id="research-interest" v-cloak>
-        <hr v-if="isLoaded">
         <h1> {{researchInterests.title}} </h1>
         <h2> {{researchInterests.text}} </h2>
     </section>
@@ -52,7 +52,6 @@
 
     <!-- Working Experience -->
     <div class="box" id="work-experience" v-cloak>
-        <hr v-if="isLoaded">
         <h1> {{workExperience.title}} </h1>
         <ul>
             <li v-for="work in workExperience.company" :key="work.id">
@@ -66,50 +65,56 @@
 
     <!-- Publication -->
     <section class="box" id="publication" v-cloak>
-        <hr v-if="isLoaded">
         <h1> {{publications.title}} </h1>
         <h2><strong> {{publications.journal.title}} </strong></h2>
-            <ul id="paper-ul">
-                <li v-for="paper in publications.journal.papers" :key="paper.id">
-                    <p id="paper-title"> {{paper.title}} </p>
-                    <p id="author-name" v-html="paper.authors"></p>
-                    <p id="paper-link" v-html="paper.publisher"></p>
-                    <p>[<a target="_blank" :href="paper.url"><strong>Link</strong></a>] <span v-if="paper.pdf">[<a target="_blank" :href="paper.pdf"><strong>PDF</strong></a>]</span> </p>
-                </li>
-            </ul>
+        <ul id="paper-ul">
+            <li v-for="paper in publications.journal.papers" :key="paper.id">
+                <p id="paper-title"> {{paper.title}} </p>
+                <p id="author-name" v-html="paper.authors"></p>
+                <p id="paper-link" v-html="paper.publisher"></p>
+                <p>[<a target="_blank" :href="paper.url"><strong>Link</strong></a>] <span v-if="paper.pdf">[<a
+                            target="_blank" :href="paper.pdf"><strong>PDF</strong></a>]</span> </p>
+            </li>
+        </ul>
         <h2><strong> {{publications.conference.title}} </strong></h2>
-            <ul id="paper-ul">
-                <li v-for="paper in publications.conference.papers" :key="paper.id">
-                    <p id="paper-title"> {{paper.title}} </p>
-                    <p id="author-name" v-html="paper.authors"></p>
-                    <p id="paper-link"> {{paper.publisher}} [<a target="_blank" :href="paper.url"><strong>Link</strong></a>] <span v-if="paper.pdf">[<a target="_blank" :href="paper.pdf"><strong>PDF</strong></a>]</span></p>
-                </li>
-            </ul>
+        <ul id="paper-ul">
+            <li v-for="paper in publications.conference.papers" :key="paper.id">
+                <p id="paper-title"> {{paper.title}} </p>
+                <p id="author-name" v-html="paper.authors"></p>
+                <p id="paper-link"> {{paper.publisher}} [<a target="_blank" :href="paper.url"><strong>Link</strong></a>]
+                    <span v-if="paper.pdf">[<a target="_blank" :href="paper.pdf"><strong>PDF</strong></a>]</span></p>
+            </li>
+        </ul>
     </section>
 
 
     <!-- Award -->
     <section class="box" id="award" v-cloak>
-        <hr v-if="isLoaded">
         <h1> {{awards.title}} </h1>
         <ul>
-            <li v-for="award in awards.allAwards" :key="award.id"><h2> {{award.awardName}} <span v-if="award.url">[<a target="_blank" :href="award.url"><strong>Link</strong></a>]</span></h2></li>
+            <li v-for="award in awards.allAwards" :key="award.id">
+                <h2> {{award.awardName}} <span v-if="award.url">[<a target="_blank"
+                            :href="award.url"><strong>Link</strong></a>]</span></h2>
+            </li>
         </ul>
     </section>
 
 
     <!-- Service -->
     <section class="box" id="service" v-cloak>
-        <hr v-if="isLoaded">
         <h1> {{services.title}} </h1>
         <ul>
-            <li v-for="service in services.allServices" :key="service.id"><h2> {{service.confName}} </h2></li>
+            <li v-for="service in services.allServices" :key="service.id">
+                <h2> {{service.confName}} </h2>
+            </li>
         </ul>
     </section>
 
 
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <script src="main.js"></script>
+
+    </div>
 </body>
 
 </html>
