@@ -50,11 +50,11 @@
     <!-- Menu Bar -->
     <div class="menu" id="menu" v-cloak>
         <button onclick="showMenu()" id="menu-button">
-            <a href="#"><i class="fa fa-bars"></i></a>
+            <a href="#"><i :class="menuData.class"></i></a>
         </button>
         <ul id="sub-menu">
             <li v-for="sec in menuData.Allsections" :key="sec.id">
-                <a href="#"><span> {{sec.title}} </span></a>
+                <a :href="'#'+sec.id"><span> {{sec.title}} </span></a>
             </li>
         </ul>
     </div>

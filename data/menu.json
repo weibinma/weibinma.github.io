@@ -1,5 +1,6 @@
 {
     "title": "menu",
+    "class": "fa fa-bars",
     "Allsections": [
         {
             "id": "headers",

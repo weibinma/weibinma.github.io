@@ -197,6 +197,9 @@ p{
         display: block !important;
         margin-left: 15px;
     }
+    #about-me {
+        margin-top: -40px;
+    }
 }
 
 @media(max-width: 600px) {
@@ -280,8 +283,4 @@ p{
     background: none;
     border: none;
     font-size: 20px;
-}
-
-#about-me {
-    margin-top: -40px;
 }
