@@ -18,6 +18,7 @@
                     <h1> {{header.myname}} </h1>
                     <h2> {{header.title}} </h2>
                 </div>
+
                 <div class="related-links">
                     <a target="_blank" :href="header.mylinks.linkedIn.url">
                         <span class="icon"><i class="fab fa-linkedin"></i></span>&nbsp;
@@ -29,6 +30,7 @@
                         <span class="icon"><i class="fab fa-github"></i></span>&nbsp;
                     </a>
                 </div>
+
                 <div class="nav-items">
                     <ul>
                         <li><a href="#headers"><span>Home</span></a></li>
@@ -45,23 +47,20 @@
     </div>
 
 
-    <!-- About Me -->
-    <div class="menu">
+    <!-- Menu Bar -->
+    <div class="menu" id="menu" v-cloak>
         <button onclick="showMenu()" id="menu-button">
             <a href="#"><i class="fa fa-bars"></i></a>
         </button>
         <ul id="sub-menu">
-            <li><a href="#headers"><span>Home</span></a></li>
-            <li><a href="#about-me"><span>About Me</span></a></li>
-            <li><a href="#research-interest"><span>Research Interests</span></a></li>
-            <li><a href="#work-experience"><span>Work Experience</span></a></li>
-            <li><a href="#publication"><span>Publication</span></a></li>
-            <li><a href="#award"><span>Award</span></a></li>
-            <li><a href="#service"><span>Service</span></a></li>
+            <li v-for="sec in menuData.Allsections" :key="sec.id">
+                <a href="#"><span> {{sec.title}} </span></a>
+            </li>
         </ul>
     </div>
 
 
+    <!-- About Me -->
     <section class="box" id="about-me" v-cloak>
         <div class="container">
             <h1> {{aboutMe.title}} </h1>

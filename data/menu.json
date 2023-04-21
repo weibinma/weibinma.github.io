@@ -1,0 +1,33 @@
+{
+    "title": "menu",
+    "Allsections": [
+        {
+            "id": "headers",
+            "title": "Home"
+        },
+        {
+            "id": "about-me",
+            "title": "About Me"
+        },
+        {
+            "id": "research-interest",
+            "title": "Research Interests"
+        },
+        {
+            "id": "work-experience",
+            "title": "Working Experience"
+        },
+        {
+            "id": "publication",
+            "title": "Publication"
+        },
+        {
+            "id": "award",
+            "title": "Award"
+        },
+        {
+            "id": "service",
+            "title": "Service"
+        }
+    ]
+}

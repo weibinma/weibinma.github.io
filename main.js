@@ -53,6 +53,25 @@ const aboutme = Vue.createApp({
     }
 });
 
+// menu component
+const menu = Vue.createApp({
+    data() {
+        return {
+            menuData: {},
+        }
+    },
+    mounted() {
+        this.fetchData('./data/menu.json')
+    },
+    methods: {
+        fetchData(filePath) {
+            fetch(filePath)
+                .then(res => res.json())
+                .then(data => this.menuData = data)
+        }
+    }
+});
+
 // research interests component
 const research = Vue.createApp({
     data() {
@@ -161,6 +180,7 @@ const service = Vue.createApp({
 
 
 headers.mount('#headers');
+menu.mount('#menu');
 aboutme.mount('#about-me');
 research.mount('#research-interest');
 work.mount('#work-experience');
@@ -171,8 +191,7 @@ service.mount('#service');
 
 function showMenu() {
     const menuButton = document.getElementById("sub-menu");
-
-    if (menuButton.style.display === "none") {
+    if (menuButton.style.display === "none" || !menuButton.style.display) {
         menuButton.style.display = "block";
     } else {
         menuButton.style.display = "none";
