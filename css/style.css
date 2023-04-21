@@ -79,6 +79,7 @@ p{
     margin: 5%;
     position: relative;
     box-sizing: border-box;
+    scroll-margin-top: 30px;
 }
 
 .box ul {
