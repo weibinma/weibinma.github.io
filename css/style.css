@@ -202,6 +202,9 @@ p{
     #about-me {
         margin-top: -40px;
     }
+    .back-to-top {
+        display: block !important;
+    }
 }
 
 @media(max-width: 600px) {
@@ -288,3 +291,15 @@ p{
     border: none;
     font-size: 30px;
 }
+
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 50%;
+    right: 0px;
+    padding: 10px;
+    z-index: 999;
+    border: #dee4ec solid;
+    border-radius: 50%;
+    font-size: 20px;
+  }
