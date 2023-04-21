@@ -195,6 +195,7 @@ p{
     }
     .menu {
         display: block !important;
+        margin-left: 15px;
     }
 }
 
@@ -208,9 +209,6 @@ p{
     }
     .wrapper .sidebar .profile .text h1 {
         font-size: larger;
-    }
-    .menu {
-        margin-left: 15px;
     }
 }
 
@@ -266,12 +264,16 @@ p{
     display: none;
     left: 20px;
     top: -85px;
-    margin-right: 75%;
+    margin-right: 65%;
 }
 
 .menu #sub-menu {
     display: none;
     margin-top: 20px;
+  }
+
+  .menu #sub-menu a {
+    font-weight: bold;
   }
 
 #menu-button {
