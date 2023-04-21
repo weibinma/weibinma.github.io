@@ -13,7 +13,7 @@ body {
     background-color: #edf2f7; 
     color: #37474f; 
     margin: auto; 
-    max-width: 50%;
+    max-width: 55%;
     padding: 80px 80px;
     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     font-size: 16px;
@@ -130,7 +130,6 @@ p{
         max-width: 70%;
     }
     .wrapper .sidebar{
-        background: rgb(175, 186, 203) !important;
         width: 160px !important;
         height: 470px !important;
         left: 18% !important;
@@ -216,7 +215,7 @@ p{
 }
 
 .wrapper .sidebar{
-    background: rgb(175, 186, 203);
+    background: rgb(169, 190, 222);
     position: fixed;
     top: 0%;
     left: 24%;
