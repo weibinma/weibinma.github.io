@@ -46,6 +46,22 @@
 
 
     <!-- About Me -->
+    <div class="menu">
+        <button onclick="showMenu()" id="menu-button">
+            <a href="#"><i class="fa fa-bars"></i></a>
+        </button>
+        <ul id="sub-menu">
+            <li><a href="#headers"><span>Home</span></a></li>
+            <li><a href="#about-me"><span>About Me</span></a></li>
+            <li><a href="#research-interest"><span>Research Interests</span></a></li>
+            <li><a href="#work-experience"><span>Work Experience</span></a></li>
+            <li><a href="#publication"><span>Publication</span></a></li>
+            <li><a href="#award"><span>Award</span></a></li>
+            <li><a href="#service"><span>Service</span></a></li>
+        </ul>
+    </div>
+
+
     <section class="box" id="about-me" v-cloak>
         <div class="container">
             <h1> {{aboutMe.title}} </h1>

@@ -167,3 +167,14 @@ work.mount('#work-experience');
 publication.mount('#publication');
 award.mount('#award');
 service.mount('#service');
+
+
+function showMenu() {
+    const menuButton = document.getElementById("sub-menu");
+
+    if (menuButton.style.display === "none") {
+        menuButton.style.display = "block";
+    } else {
+        menuButton.style.display = "none";
+    }
+}

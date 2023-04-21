@@ -165,23 +165,20 @@ p{
     }
     .wrapper .sidebar{
         position: relative !important;
-        left: 70% !important;
-        width: 100% !important;
+        left: 65% !important;
+        width: 90% !important;
         height: 50px !important;
         margin-top: -20px;
         margin-bottom: 50px;
     }
     .wrapper .sidebar .profile img{
-        position: relative;
-        width: 40px !important;
-        height: 40px !important;
-        float: left;
-        margin: -15px 20px !important;
+        display: none !important;
     }
     .wrapper .sidebar .profile .text h1{
         position: relative;
         top: -25px;
         margin-left: -10%;
+        font-size: 1.5em;
         transform: translateY(50%);
     }
     .wrapper .sidebar .profile .text h2 {
@@ -196,6 +193,9 @@ p{
     .wrapper .sidebar .profile .nav-items{
         display: none;
     }
+    .menu {
+        display: block !important;
+    }
 }
 
 @media(max-width: 600px) {
@@ -203,16 +203,15 @@ p{
         padding: 80px 0px !important;
     }
     .wrapper .sidebar {
-        max-width: 80%;
-        margin-left: -15px;
+        max-width: 100%;
+        margin-left: 10px;
     }
     .wrapper .sidebar .profile .text h1 {
         font-size: larger;
     }
-    /* .wrapper .sidebar .profile .related-links {
-        top: -25px;
-        transform: translateY(-117%);
-    } */
+    .menu {
+        margin-left: 15px;
+    }
 }
 
 .wrapper .sidebar{
@@ -260,4 +259,26 @@ p{
 
 .wrapper .sidebar .profile .nav-items span{
     font-weight: bold;
+}
+
+.menu {
+    position: relative;
+    display: none;
+    left: 20px;
+    top: -85px;
+}
+
+.menu #sub-menu {
+    display: none;
+    margin-top: 20px;
+  }
+
+#menu-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+}
+
+#about-me {
+    margin-top: -40px;
 }
