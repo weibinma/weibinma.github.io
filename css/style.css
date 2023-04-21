@@ -165,36 +165,41 @@ p{
     .wrapper .sidebar{
         position: relative !important;
         left: 65% !important;
-        width: 90% !important;
+        width: 85% !important;
         height: 50px !important;
-        margin-top: -20px;
+        margin-top: 30px;
         margin-bottom: 50px;
     }
     .wrapper .sidebar .profile img{
-        display: none !important;
+        /* display: none !important; */
+        position: absolute !important;
+        margin-top: 0 !important;
+        width: 50px !important;
+        height: 50px !important;
+        top: -80px;
+        margin-left: -15%;
+        font-size: 1.5em;
     }
     .wrapper .sidebar .profile .text h1{
         position: relative;
-        top: -25px;
+        top: -14px;
         margin-left: -10%;
         font-size: 1.5em;
-        transform: translateY(50%);
     }
     .wrapper .sidebar .profile .text h2 {
         display: none;
     }
     .wrapper .sidebar .profile .related-links {
         position: relative;
-        top: -25px;
+        top: -60px;
         float: right;
-        transform: translateY(-117%);
     }
     .wrapper .sidebar .profile .nav-items{
         display: none;
     }
     .menu {
         display: block !important;
-        margin-left: 15px;
+        margin-left: 30px;
     }
     #about-me {
         margin-top: -40px;
@@ -265,21 +270,21 @@ p{
     position: relative;
     display: none;
     left: 20px;
-    top: -85px;
+    top: -90px;
     margin-right: 45%;
 }
 
-.menu #sub-menu {
+#sub-menu {
     display: none;
     margin-top: 20px;
   }
 
-  .menu #sub-menu a {
+#sub-menu a {
     font-weight: bold;
   }
 
 #menu-button {
     background: none;
     border: none;
-    font-size: 20px;
+    font-size: 30px;
 }
