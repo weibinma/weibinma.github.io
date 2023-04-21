@@ -267,7 +267,8 @@ p{
     display: none;
     left: 20px;
     top: -85px;
-    margin-right: 65%;
+    border: #0074D9 solid;
+    margin-right: 45%;
 }
 
 .menu #sub-menu {
