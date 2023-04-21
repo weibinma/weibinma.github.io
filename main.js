@@ -34,6 +34,35 @@ const headers = Vue.createApp({
     }
 });
 
+
+// menu component
+const menu = Vue.createApp({
+    data() {
+        return {
+            menuData: {},
+        }
+    },
+    mounted() {
+        this.fetchData('./data/menu.json')
+    },
+    methods: {
+        fetchData(filePath) {
+            fetch(filePath)
+                .then(res => res.json())
+                .then(data => this.menuData = data)
+        },
+        showMenu() {
+            const menuButton = document.getElementById("sub-menu");
+            if (menuButton.style.display === "none" || !menuButton.style.display) {
+                menuButton.style.display = "block";
+            } else {
+                menuButton.style.display = "none";
+            }
+        }
+    }
+});
+
+
 // aboutme component
 const aboutme = Vue.createApp({
     data() {
@@ -53,24 +82,6 @@ const aboutme = Vue.createApp({
     }
 });
 
-// menu component
-const menu = Vue.createApp({
-    data() {
-        return {
-            menuData: {},
-        }
-    },
-    mounted() {
-        this.fetchData('./data/menu.json')
-    },
-    methods: {
-        fetchData(filePath) {
-            fetch(filePath)
-                .then(res => res.json())
-                .then(data => this.menuData = data)
-        }
-    }
-});
 
 // research interests component
 const research = Vue.createApp({
@@ -187,13 +198,3 @@ work.mount('#work-experience');
 publication.mount('#publication');
 award.mount('#award');
 service.mount('#service');
-
-
-function showMenu() {
-    const menuButton = document.getElementById("sub-menu");
-    if (menuButton.style.display === "none" || !menuButton.style.display) {
-        menuButton.style.display = "block";
-    } else {
-        menuButton.style.display = "none";
-    }
-}

@@ -49,7 +49,7 @@
 
     <!-- Menu Bar -->
     <div class="menu" id="menu" v-cloak>
-        <button onclick="showMenu()" id="menu-button">
+        <button @click="showMenu" id="menu-button">
             <a href="#"><i :class="menuData.class"></i></a>
         </button>
         <ul id="sub-menu">
