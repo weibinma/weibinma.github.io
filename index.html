@@ -32,16 +32,11 @@
                 </div>
 
                 <div class="nav-items">
-                    <ul>
-                        <li><a href="#headers"><span>Home</span></a></li>
-                        <li><a href="#about-me"><span>About Me</span></a></li>
-                        <li><a href="#research-interest"><span>Research Interests</span></a></li>
-                        <li><a href="#work-experience"><span>Work Experience</span></a></li>
-                        <li><a href="#publication"><span>Publication</span></a></li>
-                        <li><a href="#award"><span>Award</span></a></li>
-                        <li><a href="#service"><span>Service</span></a></li>
+                    <ul v-for="sec in header.secinfo">
+                        <li><a :href="'#' + sec.id"><span> {{sec.title}} </span></a></li>
                     </ul>
                 </div>
+
             </div>
         </div>
     </div>
@@ -54,7 +49,7 @@
         </button>
         <ul id="sub-menu">
             <li v-for="sec in menuData.Allsections" :key="sec.id">
-                <a :href="'#'+sec.id"><span> {{sec.title}} </span></a>
+                <a :href="'#' + sec.id"><span> {{sec.title}} </span></a>
             </li>
         </ul>
     </div>
