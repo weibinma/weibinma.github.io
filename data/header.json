@@ -17,17 +17,20 @@
         "linkedIn": {
             "id": "linkedin",
             "name": "LinkedIn",
-            "url": "https://www.linkedin.com/in/weibinma"
+            "url": "https://www.linkedin.com/in/weibinma",
+            "icon": "fab fa-linkedin"
         },
         "googleScholar": {
             "id": "googlescholar",
             "name": "Google Scholar",
-            "url": "https://scholar.google.com/citations?user=Wr8AlW8AAAAJ&hl=en"
+            "url": "https://scholar.google.com/citations?user=Wr8AlW8AAAAJ&hl=en",
+            "icon": "fas fa-graduation-cap"
         },
         "gitHub": {
             "id": "github",
             "name": "GitHub",
-            "url": "https://github.com/weibinma"
+            "url": "https://github.com/weibinma",
+            "icon": "fab fa-github"
         }
     }
 }

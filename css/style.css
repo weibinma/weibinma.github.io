@@ -131,7 +131,7 @@ p{
     }
     .wrapper .sidebar{
         background: rgb(175, 186, 203) !important;
-        width: 150px !important;
+        width: 160px !important;
         height: 470px !important;
         left: 18% !important;
     }
@@ -155,7 +155,7 @@ p{
         margin-left: 20px !important;
     }
     .wrapper .sidebar .profile .nav-items span{
-        font-size: 0.8em;
+        font-size: 0.85em;
     }
 }
 
