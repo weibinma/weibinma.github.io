@@ -137,7 +137,6 @@ p{
     }
     .wrapper .sidebar .profile img{
         position: relative;
-        display: block;
         width: 100px !important;
         height: 100px !important;
         border-radius: 50% !important;
@@ -172,7 +171,6 @@ p{
         margin-bottom: 50px;
     }
     .wrapper .sidebar .profile img{
-        /* display: none !important; */
         position: absolute !important;
         margin-top: 0 !important;
         width: 50px !important;
@@ -200,7 +198,6 @@ p{
     }
     .menu {
         display: block !important;
-        margin-left: 30px;
     }
     #about-me {
         margin-top: -40px;
@@ -268,16 +265,18 @@ p{
 }
 
 .menu {
-    position: relative;
     display: none;
+    position: relative;
     left: 20px;
-    top: -90px;
+    top: -93px;
     margin-right: 45%;
+    margin-left: 30px;
 }
 
 #sub-menu {
     display: none;
     margin-top: 20px;
+    margin-left: -15px;
   }
 
 #sub-menu a {
