@@ -13,7 +13,7 @@
     <div class="wrapper" id="headers" v-cloak>
         <div class="sidebar">
             <div class="profile">
-                <img src="images/me.jpeg" alt="headshot">
+                <img src="images/me.jpeg" alt="headshot" title="Weibin Ma">
                 <div class="text">
                     <h1> {{header.myname}} </h1>
                     <h2> {{header.title}} </h2>
@@ -21,13 +21,13 @@
 
                 <div class="related-links">
                     <a target="_blank" :href="header.mylinks.linkedIn.url">
-                        <span class="icon"><i :class="header.mylinks.linkedIn.icon"></i></span>&nbsp;
+                        <span class="icon"><i :class="header.mylinks.linkedIn.icon" title="LinkedIn"></i></span>&nbsp;
                     </a> &nbsp;&nbsp;
                     <a target="_blank" :href="header.mylinks.googleScholar.url">
-                        <span class="icon"><i :class="header.mylinks.googleScholar.icon"></i></span>&nbsp;
+                        <span class="icon"><i :class="header.mylinks.googleScholar.icon" title="Google Scholar"></i></span>&nbsp;
                     </a> &nbsp;&nbsp;
                     <a target="_blank" :href="header.mylinks.gitHub.url">
-                        <span class="icon"><i :class="header.mylinks.gitHub.icon"></i></span>&nbsp;
+                        <span class="icon"><i :class="header.mylinks.gitHub.icon" title="GitHub"></i></span>&nbsp;
                     </a>
                 </div>
 
@@ -43,7 +43,7 @@
 
         <div class="backToTop">
             <a href="#" id="back-to-top">
-                <span><i class="fa fa-arrow-up"></i></span>
+                <span><i class="fa fa-arrow-up" title="Back To Top"></i></span>
             </a>
         </div>
 
@@ -53,7 +53,7 @@
     <!-- Menu Bar -->
     <div class="menu" id="menu" v-cloak>
         <button @click="showMenu" id="menu-button">
-            <a href="#"><i :class="menuData.class"></i></a>
+            <a href="#"><i :class="menuData.class" title="Menu"></i></a>
         </button>
         <ul id="sub-menu">
             <li v-for="sec in menuData.Allsections" :key="sec.id">
