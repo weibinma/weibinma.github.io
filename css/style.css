@@ -9,6 +9,10 @@
     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #edf2f7; 
     color: #37474f; 
@@ -202,8 +206,9 @@ p{
     #about-me {
         margin-top: -40px;
     }
-    .back-to-top {
+    #back-to-top {
         display: block !important;
+        position: fixed !important;
     }
 }
 
@@ -292,13 +297,15 @@ p{
     font-size: 30px;
 }
 
-.back-to-top {
+#back-to-top {
     display: none;
     position: fixed;
-    bottom: 50%;
+    bottom: 5%;
     right: 0px;
     padding: 10px;
     z-index: 999;
+    background: none;
+    cursor: pointer;
     border: #dee4ec solid;
     border-radius: 50%;
     font-size: 20px;
