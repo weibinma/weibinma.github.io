@@ -135,9 +135,9 @@ p{
         max-width: 70%;
     }
     .wrapper .sidebar{
-        width: 160px !important;
-        height: 470px !important;
-        left: 18% !important;
+        width: 175px !important;
+        height: 480px !important;
+        left: 16% !important;
     }
     .wrapper .sidebar .profile img{
         position: relative;
@@ -145,12 +145,6 @@ p{
         height: 100px !important;
         border-radius: 50% !important;
         margin: 0 auto;
-    }
-    .wrapper .sidebar .profile .text h1 {
-        font-size: 1.1em;
-    }
-    .wrapper .sidebar .profile .text h2 {
-        font-size: 0.9em;
     }
     .wrapper .sidebar .profile .nav-items li{
         text-align: left;
@@ -210,6 +204,9 @@ p{
         display: block !important;
         position: fixed !important;
     }
+    .sidebar-hr {
+        display: none;
+    }
 }
 
 @media(max-width: 600px) {
@@ -229,9 +226,9 @@ p{
     background: rgb(169, 190, 222);
     position: fixed;
     top: 0%;
-    left: 24%;
-    width: 190px;
-    height: 560px;
+    left: 22%;
+    width: 210px;
+    height: 585px;
     padding: 20px 0;
     border-radius: 25px;
     transform: translateX(-70%);
@@ -258,8 +255,24 @@ p{
     line-height: 8px;
 }
 
+.wrapper .sidebar .profile .text h1 {
+    font-size: 1.1em;
+}
+
+.wrapper .sidebar .profile .text h2 {
+    font-size: 0.9em;
+}
+
+.sidebar .profile .related-links {
+    margin-bottom: 20px;
+}
+
 .sidebar .profile .related-links .icon {
     font-size: 1.3em;
+}
+
+.wrapper .sidebar .profile .nav-items {
+    margin-top: 15px;
 }
 
 .wrapper .sidebar .profile .nav-items li{
@@ -309,4 +322,10 @@ p{
     border: #dee4ec solid;
     border-radius: 50%;
     font-size: 20px;
+  }
+
+.sidebar-hr {
+    border: 0;
+    height: 3.5px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(93, 117, 147), rgba(0, 0, 0, 0));
   }
