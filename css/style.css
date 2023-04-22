@@ -200,7 +200,7 @@ p{
     #about-me {
         margin-top: -40px;
     }
-    #back-to-top {
+    .wrapper .backToTop a {
         display: block !important;
         position: fixed !important;
     }
@@ -310,12 +310,18 @@ p{
     font-size: 30px;
 }
 
-#back-to-top {
+.wrapper .backToTop a:hover, a:active {
+    background-color: #F08050;
+    color: white;
+}
+
+.wrapper .backToTop a {
     display: none;
     position: fixed;
     bottom: 5%;
     right: 0px;
     padding: 10px;
+    opacity: 70%;
     z-index: 999;
     background: none;
     cursor: pointer;
