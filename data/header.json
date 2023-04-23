@@ -62,5 +62,6 @@
             "id": "service",
             "title": "Service"
         }
-    ]
+    ],
+    "hrBackgroundImage": "linear-gradient(to right, rgba(0, 0, 0, 0), rgb(93, 117, 147), rgba(0, 0, 0, 0))"
 }

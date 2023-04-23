@@ -10,8 +10,9 @@ const headers = Vue.createApp({
                     linkedIn: {},
                     googleScholar: {},
                     gitHub: {}
-                }
-            },
+                },
+                hrBackgroundImage: ''
+            }
         }
     },
     mounted() {
