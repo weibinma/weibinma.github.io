@@ -339,6 +339,7 @@ footer {
     position: relative; 
     bottom: -40px;
     text-align: center;
+    margin: 0 40px;
 }
 
 footer .edit-date {
@@ -348,5 +349,5 @@ footer .edit-date {
 
 footer .edit-date a {
     color:gray;
-    text-decoration: underline;     
+    text-decoration: underline;
 }
