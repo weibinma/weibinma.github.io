@@ -194,21 +194,18 @@ const footer = Vue.createApp({
     },
     methods: {
         fetchData(filePath) {
-            const editDate = this.getToday();
-            const template = {'text': 'Website template', 'link': 'https://github.com/weibinma/weibinma.github.io'}
+            const currYear = this.getCurrentYear();
+            const authorInfo = {'editDate': 'Apr, 2023', 'templateText': 'Website template', 'templateLink': 'https://github.com/weibinma/weibinma.github.io'}
             fetch(filePath)
                 .then(res => res.json())
                 .then(data => {
-                    this.footers = {...data, ...editDate, ...template}
+                    this.footers = {...data, ...authorInfo, ...currYear}
                 })
         },
-        getToday() {
-            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        getCurrentYear() {
             const today = new Date();
-            const d = today.getDate();
-            const m = today.getMonth();
             const y = today.getFullYear();
-            return { 'year': y, 'month': months[m], 'date': d };
+            return {'year': y}
         },
     }
 });
