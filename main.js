@@ -195,10 +195,11 @@ const footer = Vue.createApp({
     methods: {
         fetchData(filePath) {
             const editDate = this.getToday();
+            const template = {'text': 'Website template', 'link': 'https://github.com/weibinma/weibinma.github.io'}
             fetch(filePath)
                 .then(res => res.json())
                 .then(data => {
-                    this.footers = {...data, ...editDate}
+                    this.footers = {...data, ...editDate, ...template}
                 })
         },
         getToday() {

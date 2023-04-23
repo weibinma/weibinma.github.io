@@ -310,7 +310,7 @@ p{
     font-size: 30px;
 }
 
-.wrapper .backToTop a:hover, a:active {
+.wrapper .backToTop a:hover, .backToTop a:active {
     background-color: #F08050;
     color: white;
 }
@@ -344,4 +344,9 @@ footer {
 footer .edit-date {
     font-size: smaller;
     color:gray;
+}
+
+footer .edit-date a {
+    color:gray;
+    text-decoration: underline;     
 }
