@@ -19,14 +19,6 @@ const headers = Vue.createApp({
         this.fetchData('./data/header.json')
     },
     methods: {
-        getToday() {
-            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-            const today = new Date();
-            // const d = today.getDate();
-            const m = today.getMonth();
-            const y = today.getFullYear();
-            return `Last modified in ${months[m]}, ${y}`;
-        },
         fetchData(filePath) {
             fetch(filePath)
                 .then(res => res.json())
@@ -190,6 +182,37 @@ const service = Vue.createApp({
 });
 
 
+// footer component
+const footer = Vue.createApp({
+    data() {
+        return {
+            footers: {},
+        }
+    },
+    mounted() {
+        this.fetchData('./data/footer.json')
+    },
+    methods: {
+        fetchData(filePath) {
+            const editDate = this.getToday();
+            fetch(filePath)
+                .then(res => res.json())
+                .then(data => {
+                    this.footers = {...data, ...editDate}
+                })
+        },
+        getToday() {
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const today = new Date();
+            const d = today.getDate();
+            const m = today.getMonth();
+            const y = today.getFullYear();
+            return { 'year': y, 'month': months[m], 'date': d };
+        },
+    }
+});
+
+
 
 headers.mount('#headers');
 menu.mount('#menu');
@@ -199,3 +222,4 @@ work.mount('#work-experience');
 publication.mount('#publication');
 award.mount('#award');
 service.mount('#service');
+footer.mount('#footer');

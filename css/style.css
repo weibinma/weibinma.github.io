@@ -334,3 +334,14 @@ p{
     border: 0;
     height: 3.5px;
   }
+
+footer {
+    position: relative; 
+    bottom: -40px;
+    text-align: center;
+}
+
+footer .edit-date {
+    font-size: smaller;
+    color:gray;
+}
