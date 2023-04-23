@@ -11,6 +11,9 @@
     - computer webpage: has a sidebar on the left side
     - mobile webpage: has an expandable menu button to expand covered sections
     - mobile webpage: has a back-to-top arrow
+    
+ - Planning
+  - Migrate to Vue CLI
 
 
 NOTE: I may update the content in free time.
