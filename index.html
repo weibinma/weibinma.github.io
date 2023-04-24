@@ -84,7 +84,7 @@
     <!-- Working Experience -->
     <div class="box" id="work-experience" v-cloak>
         <h1> {{workExperience.title}} </h1>
-        <ul>
+        <ul class="works-list">
             <li v-for="work in workExperience.company" :key="work.id">
                 <h2 id="company-name"><strong> {{work.company}} </strong></h2>
                 <p id="job-title"> {{work.title}} </p>
