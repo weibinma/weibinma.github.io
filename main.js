@@ -46,10 +46,11 @@ const menu = Vue.createApp({
         },
         showMenu() {
             const menuButton = document.getElementById("sub-menu");
-            if (menuButton.style.display === "none" || !menuButton.style.display) {
-                menuButton.style.display = "block";
+            console.log(menuButton.style.maxHeight);
+            if (menuButton.style.maxHeight) {
+                menuButton.style.maxHeight = null;
             } else {
-                menuButton.style.display = "none";
+                menuButton.style.maxHeight = menuButton.scrollHeight + 'px';
             }
         }
     }

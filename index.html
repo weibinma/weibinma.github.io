@@ -55,11 +55,13 @@
         <button @click="showMenu" id="menu-button">
             <a href="#"><i :class="menuData.class" title="Menu"></i></a>
         </button>
-        <ul id="sub-menu">
-            <li v-for="sec in menuData.Allsections" :key="sec.id">
-                <a :href="'#' + sec.id"><span> {{sec.title}} </span></a>
-            </li>
-        </ul>
+        <div id="sub-menu">
+            <ul>
+                <li v-for="sec in menuData.Allsections" :key="sec.id">
+                    <a :href="'#' + sec.id"><span> {{sec.title}} </span></a>
+                </li>
+            </ul>
+        </div>
     </div>
 
 
