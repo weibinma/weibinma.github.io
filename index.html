@@ -67,10 +67,8 @@
 
     <!-- About Me -->
     <section class="box" id="about-me" v-cloak>
-        <div class="container">
-            <h1> {{aboutMe.title}} </h1>
-            <h2 v-html="aboutMe.text"></h2>
-        </div>
+        <h1> {{aboutMe.title}} </h1>
+        <h2 v-html="aboutMe.text"></h2>
     </section>
 
 
@@ -122,23 +120,19 @@
     <!-- Award -->
     <section class="box" id="award" v-cloak>
         <h1> {{awards.title}} </h1>
-        <ul>
-            <li v-for="award in awards.allAwards" :key="award.id">
-                <h2> {{award.awardName}} <span v-if="award.url">[<a target="_blank"
-                            :href="award.url"><strong>Link</strong></a>]</span></h2>
-            </li>
-        </ul>
+        <h2 v-for="award in awards.allAwards" :key="award.id"> 
+            {{award.awardName}} 
+            <span v-if="award.url">[<a target="_blank" :href="award.url"><strong>Link</strong></a>]</span>
+        </h2>
     </section>
 
 
     <!-- Service -->
     <section class="box" id="service" v-cloak>
         <h1> {{services.title}} </h1>
-        <ul>
-            <li v-for="service in services.allServices" :key="service.id">
-                <h2> {{service.confName}} </h2>
-            </li>
-        </ul>
+        <h2 v-for="service in services.allServices" :key="service.id"> 
+            {{service.confName}}
+        </h2>
     </section>
 
     <!-- Footer -->

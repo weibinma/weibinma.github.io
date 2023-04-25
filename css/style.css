@@ -24,14 +24,6 @@ body {
     line-height: 1.6em;
 }
 
-h3 {
-    font-weight: normal;
-}
-
-h4 {
-    font-weight: normal;
-}
-
 a {
     text-decoration:none;
     font-weight: normal;
@@ -50,6 +42,7 @@ h1 {
 h2 {
     font-weight: normal;
     font-size: large;
+    margin: 0.2em;
 }
 
 li{
@@ -61,15 +54,9 @@ p{
     padding: 0em;
 }
 
-.container {
-    width: 100%;
-    overflow: hidden;
-}
-
 #main-header h1 {
     font-size: xx-large;
 }
-
 
 #self-intro h2{
     margin: 0.2em;
@@ -118,20 +105,12 @@ p{
     padding: 0.5em;
 }
 
-#award h2{
-    margin: 0.2em;
-}
-
 #award a {
     font-size: 0.875em;
 }
 
 #award a:hover {
     font-size: 0.8575em; /*0.875 * 98%*/
-}
-
-#service h2 {
-    margin: 0.2em;
 }
 
 [v-cloak] {
