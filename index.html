@@ -24,7 +24,8 @@
                         <span class="icon"><i :class="header.mylinks.linkedIn.icon" title="LinkedIn"></i></span>&nbsp;
                     </a> &nbsp;&nbsp;
                     <a target="_blank" :href="header.mylinks.googleScholar.url">
-                        <span class="icon"><i :class="header.mylinks.googleScholar.icon" title="Google Scholar"></i></span>&nbsp;
+                        <span class="icon"><i :class="header.mylinks.googleScholar.icon"
+                                title="Google Scholar"></i></span>&nbsp;
                     </a> &nbsp;&nbsp;
                     <a target="_blank" :href="header.mylinks.gitHub.url">
                         <span class="icon"><i :class="header.mylinks.gitHub.icon" title="GitHub"></i></span>&nbsp;
@@ -111,7 +112,8 @@
                 <p id="paper-title"> {{paper.title}} </p>
                 <p id="author-name" v-html="paper.authors"></p>
                 <p id="paper-link"> {{paper.publisher}} [<a target="_blank" :href="paper.url"><strong>Link</strong></a>]
-                    <span v-if="paper.pdf">[<a target="_blank" :href="paper.pdf"><strong>PDF</strong></a>]</span></p>
+                    <span v-if="paper.pdf">[<a target="_blank" :href="paper.pdf"><strong>PDF</strong></a>]</span>
+                </p>
             </li>
         </ul>
     </section>
@@ -120,8 +122,8 @@
     <!-- Award -->
     <section class="box" id="award" v-cloak>
         <h1> {{awards.title}} </h1>
-        <h2 v-for="award in awards.allAwards" :key="award.id"> 
-            {{award.awardName}} 
+        <h2 v-for="award in awards.allAwards" :key="award.id">
+            {{award.awardName}}
             <span v-if="award.url">[<a target="_blank" :href="award.url"><strong>Link</strong></a>]</span>
         </h2>
     </section>
@@ -130,13 +132,13 @@
     <!-- Service -->
     <section class="box" id="service" v-cloak>
         <h1> {{services.title}} </h1>
-        <h2 v-for="service in services.allServices" :key="service.id"> 
+        <h2 v-for="service in services.allServices" :key="service.id">
             {{service.confName}}
         </h2>
     </section>
 
     <!-- Footer -->
-    <footer id="footer" v-cloak> 
+    <footer id="footer" v-cloak>
         {{footers.copyrightInfo}} {{footers.author}} {{footers.year}}
         &nbsp;
         <span class="edit-date">
@@ -150,7 +152,6 @@
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <script src="main.js"></script>
 
-    </div>
 </body>
 
 </html>
